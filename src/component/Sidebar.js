@@ -22,13 +22,13 @@ const Sidebar = () => {
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="">
-                    <img src="assets/images/icons/speedometer2.svg" alt="" />
+                    <img src="assets/images/icons/pin-map-fill.svg" alt="" />
                     Tips
                   </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="">
-                    <img src="assets/images/icons/gear.svg" alt="" />
+                    <img src="assets/images/icons/people-fill.svg" alt="" />
                     Tracking
                   </a>
                 </li>
@@ -42,7 +42,10 @@ const Sidebar = () => {
 
                 <li class="nav-item">
                   <a class="nav-link" href="">
-                    <img src="assets/images/icons/gear.svg" alt="" />
+                    <img
+                      src="assets/images/icons/bar-chart-line-fill.svg"
+                      alt=""
+                    />
                     Analytics
                   </a>
                 </li>
