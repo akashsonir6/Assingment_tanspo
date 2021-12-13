@@ -11,47 +11,55 @@ const Dashboard = () => {
 
   return (
     <div>
-      <main class="main-section-start">
-        <section class="menu-section">
-          <div class="container-fluid">
-            <div class="row mb-4">
-              <div class="col-12 col-sm-6 col-md-8 col-lg-8">
-                <div class="left-menu-wrapper mb-3">
-                  <ul class="nav nav-tabs">
-                    <li class="nav-item">
-                      <a class="nav-link active" data-toggle="tab" href="#all">
+      <main className="main-section-start">
+        <section className="menu-section">
+          <div className="container-fluid">
+            <div className="row mb-4">
+              <div className="col-12 col-sm-6 col-md-8 col-lg-8">
+                <div className="left-menu-wrapper mb-3">
+                  <ul className="nav nav-tabs">
+                    <li className="nav-item">
+                      <a
+                        className="nav-link active"
+                        data-toggle="tab"
+                        href="#all"
+                      >
                         All
                       </a>
                     </li>
-                    <li class="nav-item">
-                      <a class="nav-link" data-toggle="tab" href="#ftl">
+                    <li className="nav-item">
+                      <a className="nav-link" data-toggle="tab" href="#ftl">
                         FTL
                       </a>
                     </li>
-                    <li class="nav-item">
-                      <a class="nav-link" data-toggle="tab" href="#lcl">
+                    <li className="nav-item">
+                      <a className="nav-link" data-toggle="tab" href="#lcl">
                         LCL
                       </a>
                     </li>
                     .
-                    <li class="nav-item">
-                      <a class="nav-link" data-toggle="tab" href="#courier">
+                    <li className="nav-item">
+                      <a className="nav-link" data-toggle="tab" href="#courier">
                         Courier
                       </a>
                     </li>
-                    <li class="nav-item">
-                      <a class="nav-link" data-toggle="tab" href="#container">
+                    <li className="nav-item">
+                      <a
+                        className="nav-link"
+                        data-toggle="tab"
+                        href="#container"
+                      >
                         Container
                       </a>
                     </li>
                   </ul>
                 </div>
-                <div class="row">
-                  <div class="col-12 col-sm-12 col-md-6 col-lg-6">
-                    <div class="input-group">
-                      <div class="input-group-prepend">
+                <div className="row">
+                  <div className="col-12 col-sm-12 col-md-6 col-lg-6">
+                    <div className="input-group">
+                      <div className="input-group-prepend">
                         <span
-                          class="input-group-text "
+                          className="input-group-text "
                           style={{ background: "#fff", borderRight: "0" }}
                         >
                           <img src="assets/images/icons/search.svg" alt="" />
@@ -59,16 +67,16 @@ const Dashboard = () => {
                       </div>
                       <input
                         type="text"
-                        class="form-control"
+                        className="form-control"
                         placeholder="Search"
                       />
                     </div>
                   </div>
-                  <div class="col-12 col-sm-12 col-md-6 col-lg-6">
-                    <div class="input-group">
-                      <div class="input-group-prepend">
+                  <div className="col-12 col-sm-12 col-md-6 col-lg-6">
+                    <div className="input-group">
+                      <div className="input-group-prepend">
                         <span
-                          class="input-group-text "
+                          className="input-group-text "
                           style={{ background: "#fff", borderRight: "0" }}
                         >
                           <img src="assets/images/icons/search.svg" alt="" />
@@ -76,38 +84,42 @@ const Dashboard = () => {
                       </div>
                       <input
                         type="text"
-                        class="form-control"
+                        className="form-control"
                         placeholder="Search"
                       />
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="col-12 col-sm-6 col-md-4 col-lg-4">
-                <div class="right-menu-wrapper mb-3">
-                  <ul class="nav nav-tabs">
-                    <li class="nav-item">
+              <div className="col-12 col-sm-6 col-md-4 col-lg-4">
+                <div className="right-menu-wrapper mb-3">
+                  <ul className="nav nav-tabs">
+                    <li className="nav-item">
                       <a
-                        class="nav-link active"
+                        className="nav-link active"
                         data-toggle="tab"
                         href="#inbound"
                       >
                         Inbound
                       </a>
                     </li>
-                    <li class="nav-item">
-                      <a class="nav-link" data-toggle="tab" href="#outbound">
+                    <li className="nav-item">
+                      <a
+                        className="nav-link"
+                        data-toggle="tab"
+                        href="#outbound"
+                      >
                         Outbound
                       </a>
                     </li>
                   </ul>
                 </div>
-                <div class="row">
-                  <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                    <div class="input-group">
-                      <div class="input-group-prepend">
+                <div className="row">
+                  <div className="col-12 col-sm-12 col-md-12 col-lg-12">
+                    <div className="input-group">
+                      <div className="input-group-prepend">
                         <span
-                          class="input-group-text "
+                          className="input-group-text "
                           style={{ background: "#fff", borderRight: "0" }}
                         >
                           <img src="assets/images/icons/search.svg" alt="" />
@@ -115,7 +127,7 @@ const Dashboard = () => {
                       </div>
                       <input
                         type="text"
-                        class="form-control"
+                        className="form-control"
                         placeholder="Search"
                       />
                     </div>
@@ -126,90 +138,90 @@ const Dashboard = () => {
           </div>
         </section>
 
-        <section class="card-section">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-12 col-sm-6 col-md-2 col-lg-2">
-                <div class="card-wrapper" style={{ background: "#3f51b5" }}>
+        <section className="card-section">
+          <div className="container-fluid">
+            <div className="row">
+              <div className="col-12 col-sm-6 col-md-2 col-lg-2">
+                <div className="card-wrapper" style={{ background: "#3f51b5" }}>
                   <h1>Total Trips</h1>
-                  <div class="details">
+                  <div className="details">
                     <h2>54</h2>
                     <p>100 Cr</p>
                   </div>
-                  <div class="percent-value">
+                  <div className="percent-value">
                     <p>+8%</p>
                     <p>-9.9%</p>
                   </div>
                 </div>
               </div>
 
-              <div class="col-12 col-sm-6 col-md-2 col-lg-2">
-                <div class="card-wrapper" style={{ background: "#087252" }}>
+              <div className="col-12 col-sm-6 col-md-2 col-lg-2">
+                <div className="card-wrapper" style={{ background: "#087252" }}>
                   <h1>Total Trips</h1>
-                  <div class="details">
+                  <div className="details">
                     <h2>54</h2>
                     <p>100 Cr</p>
                   </div>
-                  <div class="percent-value">
+                  <div className="percent-value">
                     <p>+8%</p>
                     <p>-9.9%</p>
                   </div>
                 </div>
               </div>
 
-              <div class="col-12 col-sm-6 col-md-2 col-lg-2">
+              <div className="col-12 col-sm-6 col-md-2 col-lg-2">
                 <div
-                  class="card-wrapper"
+                  className="card-wrapper"
                   style={{ backgroundColor: "#888585" }}
                 >
                   <h1>Total Trips</h1>
-                  <div class="details">
+                  <div className="details">
                     <h2>54</h2>
                     <p>100 Cr</p>
                   </div>
-                  <div class="percent-value">
+                  <div className="percent-value">
                     <p>+8%</p>
                     <p>-9.9%</p>
                   </div>
                 </div>
               </div>
 
-              <div class="col-12 col-sm-6 col-md-2 col-lg-2">
-                <div class="card-wrapper" style={{ background: "#000" }}>
+              <div className="col-12 col-sm-6 col-md-2 col-lg-2">
+                <div className="card-wrapper" style={{ background: "#000" }}>
                   <h1>Total Trips</h1>
-                  <div class="details">
+                  <div className="details">
                     <h2>54</h2>
                     <p>100 Cr</p>
                   </div>
-                  <div class="percent-value">
+                  <div className="percent-value">
                     <p>+8%</p>
                     <p>-9.9%</p>
                   </div>
                 </div>
               </div>
 
-              <div class="col-12 col-sm-6 col-md-2 col-lg-2">
-                <div class="card-wrapper" style={{ background: "red" }}>
+              <div className="col-12 col-sm-6 col-md-2 col-lg-2">
+                <div className="card-wrapper" style={{ background: "red" }}>
                   <h1>Total Trips</h1>
-                  <div class="details">
+                  <div className="details">
                     <h2>54</h2>
                     <p>100 Cr</p>
                   </div>
-                  <div class="percent-value">
+                  <div className="percent-value">
                     <p>+8%</p>
                     <p>-9.9%</p>
                   </div>
                 </div>
               </div>
 
-              <div class="col-12 col-sm-6 col-md-2 col-lg-2">
-                <div class="card-wrapper" style={{ background: "#6c9fda" }}>
+              <div className="col-12 col-sm-6 col-md-2 col-lg-2">
+                <div className="card-wrapper" style={{ background: "#6c9fda" }}>
                   <h1>Total Trips</h1>
-                  <div class="details">
+                  <div className="details">
                     <h2>54</h2>
                     <p>100 Cr</p>
                   </div>
-                  <div class="percent-value">
+                  <div className="percent-value">
                     <p>+8%</p>
                     <p>-9.9%</p>
                   </div>
@@ -219,19 +231,19 @@ const Dashboard = () => {
           </div>
         </section>
 
-        <section class="tiles-section">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-12 col-sm-12 col-md-6 col-lg-6">
-                <div class="tiles-wrapper">
-                  <div class="tiles-heading red-border">
-                    <h1 class="text-danger">Missing Truck</h1>
+        <section className="tiles-section">
+          <div className="container-fluid">
+            <div className="row">
+              <div className="col-12 col-sm-12 col-md-6 col-lg-6">
+                <div className="tiles-wrapper">
+                  <div className="tiles-heading red-border">
+                    <h1 className="text-danger">Missing Truck</h1>
                     <p>
-                      Value: <span class="bg-danger">5 Cr</span>
+                      Value: <span className="bg-danger">5 Cr</span>
                     </p>
                   </div>
-                  <div class="transport-details">
-                    <div class="transport-id">
+                  <div className="transport-details">
+                    <div className="transport-id">
                       <p>
                         Trip id: <span>123456</span>
                       </p>
@@ -239,7 +251,7 @@ const Dashboard = () => {
                         Transporter: <span>VRL Logistics</span>
                       </p>
                     </div>
-                    <div class="transport-location">
+                    <div className="transport-location">
                       <p>
                         From: <span>Mumbai</span>
                       </p>
@@ -248,28 +260,28 @@ const Dashboard = () => {
                       </p>
                     </div>
                   </div>
-                  <div class="driver-details-wrapper">
-                    <div class="driver-details">
+                  <div className="driver-details-wrapper">
+                    <div className="driver-details">
                       <h1>Driver Details</h1>
                       <p>Rahul (9999999999)</p>
                     </div>
-                    <div class="driver-location">
+                    <div className="driver-location">
                       <h1>Last Known Details</h1>
                       <p>Kolhapur (123456790)</p>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="col-12 col-sm-12 col-md-6 col-lg-6">
-                <div class="tiles-wrapper">
-                  <div class="tiles-heading black-border">
+              <div className="col-12 col-sm-12 col-md-6 col-lg-6">
+                <div className="tiles-wrapper">
+                  <div className="tiles-heading black-border">
                     <h1>Detention Truck</h1>
                     <p>
-                      Value: <span class="bg-secondary">5 Cr</span>
+                      Value: <span className="bg-secondary">5 Cr</span>
                     </p>
                   </div>
-                  <div class="transport-details">
-                    <div class="transport-id">
+                  <div className="transport-details">
+                    <div className="transport-id">
                       <p>
                         Trip id: <span>123456</span>
                       </p>
@@ -277,7 +289,7 @@ const Dashboard = () => {
                         Transporter: <span>VRL Logistics</span>
                       </p>
                     </div>
-                    <div class="transport-location">
+                    <div className="transport-location">
                       <p>
                         From: <span>Mumbai</span>
                       </p>
@@ -286,12 +298,12 @@ const Dashboard = () => {
                       </p>
                     </div>
                   </div>
-                  <div class="driver-details-wrapper">
-                    <div class="driver-details">
+                  <div className="driver-details-wrapper">
+                    <div className="driver-details">
                       <h1>Driver Details</h1>
                       <p>Rahul (9999999999)</p>
                     </div>
-                    <div class="driver-location">
+                    <div className="driver-location">
                       <h1>Last Known Details</h1>
                       <p>Kolhapur (123456790)</p>
                     </div>
@@ -302,19 +314,19 @@ const Dashboard = () => {
           </div>
         </section>
 
-        <section class="tiles-section">
-          <div class="container-fluid">
-            <div class="row mb-3">
-              <div class="col-12 col-sm-12 col-md-6 col-lg-6">
-                <div class="tiles-wrapper h-100">
-                  <div class="tiles-heading red-border">
-                    <h1 class="text-danger">Missing Truck</h1>
+        <section className="tiles-section">
+          <div className="container-fluid">
+            <div className="row mb-3">
+              <div className="col-12 col-sm-12 col-md-6 col-lg-6">
+                <div className="tiles-wrapper h-100">
+                  <div className="tiles-heading red-border">
+                    <h1 className="text-danger">Missing Truck</h1>
                     <p>
-                      Value: <span class="bg-danger">5 Cr</span>
+                      Value: <span className="bg-danger">5 Cr</span>
                     </p>
                   </div>
-                  <div class="transport-details">
-                    <div class="transport-id">
+                  <div className="transport-details">
+                    <div className="transport-id">
                       <p>
                         Trip id: <span>123456</span>
                       </p>
@@ -322,7 +334,7 @@ const Dashboard = () => {
                         Transporter: <span>VRL Logistics</span>
                       </p>
                     </div>
-                    <div class="transport-location">
+                    <div className="transport-location">
                       <p>
                         From: <span>Mumbai</span>
                       </p>
@@ -331,30 +343,35 @@ const Dashboard = () => {
                       </p>
                     </div>
                   </div>
-                  <div class="driver-details-wrapper">
-                    <div class="driver-details">
+                  <div className="driver-details-wrapper">
+                    <div className="driver-details">
                       <h1>Driver Details</h1>
                       <p>Rahul (9999999999)</p>
                     </div>
-                    <div class="driver-location">
+                    <div className="driver-location">
                       <h1>Last Known Details</h1>
                       <p>Kolhapur (123456790)</p>
                     </div>
                   </div>
-                  <div class="btn-wrapper w-100 text-left mt-4">
-                    <button class="btn btn-outline-danger">View more</button>
+                  <div className="btn-wrapper w-100 text-left mt-4">
+                    <button className="btn btn-outline-danger">
+                      View more
+                    </button>
                   </div>
                 </div>
               </div>
-              <div class="col-12 col-sm-12 col-md-6 col-lg-6">
-                <div class="row">
-                  <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                    <div class="tiles-wrapper">
-                      <div class="tiles-heading black-border">
+              <div className="col-12 col-sm-12 col-md-6 col-lg-6">
+                <div className="row">
+                  <div className="col-12 col-sm-12 col-md-12 col-lg-12">
+                    <div className="tiles-wrapper">
+                      <div className="tiles-heading black-border">
                         <h1>Do you know?</h1>
                       </div>
-                      <div class="transport-details">
-                        <div class="transport-id" style={{ flex: "0 0 100%" }}>
+                      <div className="transport-details">
+                        <div
+                          className="transport-id"
+                          style={{ flex: "0 0 100%" }}
+                        >
                           <p>
                             Lorem, ipsum dolor sit amet consectetur adipisicing
                             elit. Dignissimos autem natus inventore? Dolorem
@@ -364,22 +381,25 @@ const Dashboard = () => {
                           </p>
                         </div>
                       </div>
-                      <div class="btn-wrapper w-100 text-right">
-                        <button class="btn btn-outline-success">
+                      <div className="btn-wrapper w-100 text-right">
+                        <button className="btn btn-outline-success">
                           Start Tracking
                         </button>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="row ">
-                  <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                    <div class="tiles-wrapper mb-0">
-                      <div class="tiles-heading black-border">
+                <div className="row ">
+                  <div className="col-12 col-sm-12 col-md-12 col-lg-12">
+                    <div className="tiles-wrapper mb-0">
+                      <div className="tiles-heading black-border">
                         <h1>Transporter Details</h1>
                       </div>
-                      <div class="transport-details">
-                        <div class="transport-id" style={{ flex: "0 0 40%" }}>
+                      <div className="transport-details">
+                        <div
+                          className="transport-id"
+                          style={{ flex: "0 0 40%" }}
+                        >
                           <p>
                             Trip id: <span>123456</span>
                           </p>
@@ -388,7 +408,7 @@ const Dashboard = () => {
                           </p>
                         </div>
                         <div
-                          class="transport-location"
+                          className="transport-location"
                           //   style="flex: 0 0 40%;"
                           style={{ flex: " 0 0 40%" }}
                         >
@@ -400,10 +420,10 @@ const Dashboard = () => {
                           </p>
                         </div>
                         <div
-                          class="btn-wrapper w-100 text-right"
+                          className="btn-wrapper w-100 text-right"
                           style={{ flex: "0 0 20%" }}
                         >
-                          <button class="btn btn-outline-success">
+                          <button className="btn btn-outline-success">
                             View All
                           </button>
                         </div>
