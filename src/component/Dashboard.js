@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
-
+import { Link } from "react-router-dom";
 const Dashboard = () => {
   const [transport_dtails, settransport_dtails] = useState([]);
   useEffect(() => {
@@ -8,7 +8,7 @@ const Dashboard = () => {
       settransport_dtails(res.data)
     );
   }, []);
-
+  console.log(transport_dtails);
   return (
     <div>
       <main className="main-section-start">
@@ -19,38 +19,42 @@ const Dashboard = () => {
                 <div className="left-menu-wrapper mb-3">
                   <ul className="nav nav-tabs">
                     <li className="nav-item">
-                      <a
+                      <Link
                         className="nav-link active"
                         data-toggle="tab"
-                        href="#all"
+                        to="#all"
                       >
                         All
-                      </a>
+                      </Link>
                     </li>
                     <li className="nav-item">
-                      <a className="nav-link" data-toggle="tab" href="#ftl">
+                      <Link className="nav-link" data-toggle="tab" to="">
                         FTL
-                      </a>
+                      </Link>
                     </li>
                     <li className="nav-item">
-                      <a className="nav-link" data-toggle="tab" href="#lcl">
+                      <Link className="nav-link" data-toggle="tab" to="#lcl">
                         LCL
-                      </a>
+                      </Link>
                     </li>
-                    .
+
                     <li className="nav-item">
-                      <a className="nav-link" data-toggle="tab" href="#courier">
-                        Courier
-                      </a>
-                    </li>
-                    <li className="nav-item">
-                      <a
+                      <Link
                         className="nav-link"
                         data-toggle="tab"
-                        href="#container"
+                        to="#courier"
+                      >
+                        Courier
+                      </Link>
+                    </li>
+                    <li className="nav-item">
+                      <Link
+                        className="nav-link"
+                        data-toggle="tab"
+                        to="#container"
                       >
                         Container
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -95,22 +99,22 @@ const Dashboard = () => {
                 <div className="right-menu-wrapper mb-3">
                   <ul className="nav nav-tabs">
                     <li className="nav-item">
-                      <a
+                      <Link
                         className="nav-link active"
                         data-toggle="tab"
-                        href="#inbound"
+                        to="#inbound"
                       >
                         Inbound
-                      </a>
+                      </Link>
                     </li>
                     <li className="nav-item">
-                      <a
+                      <Link
                         className="nav-link"
                         data-toggle="tab"
-                        href="#outbound"
+                        to="#outbound"
                       >
                         Outbound
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </div>

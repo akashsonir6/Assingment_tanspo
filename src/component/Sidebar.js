@@ -1,62 +1,62 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 const Sidebar = () => {
   return (
     <div>
       <div id="sidebar-menu">
         <header className="main-header">
           <nav className="navbar navbar-expand-lg">
-            <a className="navbar-brand" href="#">
+            <Link className="navbar-brand" to="/">
               <img src="assets/images/logo.jpeg" alt="" />
-            </a>
+            </Link>
             <div
               className="collapse navbar-collapse justify-content-end"
               id="navbarSupportedContent"
             >
               <ul className="navbar-nav">
                 <li className="nav-item active">
-                  <a className="nav-link" href="">
+                  <Link className="nav-link" to="/">
                     <img src="assets/images/icons/speedometer2.svg" alt="" />
                     Dashboard
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="">
+                  <Link className="nav-link" to="">
                     <img src="assets/images/icons/pin-map-fill.svg" alt="" />
                     Tips
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="">
+                  <Link className="nav-link" to="">
                     <img src="assets/images/icons/people-fill.svg" alt="" />
                     Tracking
-                  </a>
+                  </Link>
                 </li>
 
                 <li className="nav-item">
-                  <a className="nav-link" href="">
+                  <Link className="nav-link" to="">
                     <img src="assets/images/icons/compass.svg" alt="" />
                     Transporters
-                  </a>
+                  </Link>
                 </li>
 
                 <li className="nav-item">
-                  <a className="nav-link" href="">
+                  <Link className="nav-link" to="">
                     <img
                       src="assets/images/icons/bar-chart-line-fill.svg"
                       alt=""
                     />
                     Analytics
-                  </a>
+                  </Link>
                 </li>
               </ul>
 
               <ul className="navbar-nav">
                 <li className="nav-item m-0">
-                  <a href="">
+                  <Link to="">
                     <img src="assets/images/icons/gear.svg" alt="" />
                     Settings
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
