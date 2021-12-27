@@ -1,14 +1,32 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
 import { Link } from "react-router-dom";
+
 const Dashboard = () => {
-  const [transport_dtails, settransport_dtails] = useState([]);
+  const [transport_details, settransport_details] = useState([]);
+  const [missingTruck, setMissingTruck] = useState([]);
+
+  const color = ["green", "red", "blue", "black", "seagreen", "gray"];
   useEffect(() => {
-    Axios.get(" http://localhost:3004/transport").then((res) =>
-      settransport_dtails(res.data)
-    );
+    getdata();
+    MissingTrack();
   }, []);
-  console.log(transport_dtails);
+  let missing_data = missingTruck.map((value) => {
+    return value;
+  });
+  console.log(missing_data.id);
+
+  const getdata = async () => {
+    const url = " http://localhost:3004/transport";
+    await Axios.get(url).then((res) => settransport_details(res.data));
+  };
+
+  const MissingTrack = async () => {
+    await Axios.get("http://localhost:3004/MissingTruck").then((resp) =>
+      setMissingTruck(resp.data)
+    );
+  };
+
   return (
     <div>
       <main className="main-section-start">
@@ -66,7 +84,10 @@ const Dashboard = () => {
                           className="input-group-text "
                           style={{ background: "#fff", borderRight: "0" }}
                         >
-                          <img src="assets/images/icons/search.svg" alt="" />
+                          <img
+                            src="assets/images/icons/search.svg"
+                            alt="search"
+                          />
                         </span>
                       </div>
                       <input
@@ -145,92 +166,24 @@ const Dashboard = () => {
         <section className="card-section">
           <div className="container-fluid">
             <div className="row">
-              <div className="col-12 col-sm-6 col-md-2 col-lg-2">
-                <div className="card-wrapper" style={{ background: "#3f51b5" }}>
-                  <h1>Total Trips</h1>
-                  <div className="details">
-                    <h2>54</h2>
-                    <p>100 Cr</p>
-                  </div>
-                  <div className="percent-value">
-                    <p>+8%</p>
-                    <p>-9.9%</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-12 col-sm-6 col-md-2 col-lg-2">
-                <div className="card-wrapper" style={{ background: "#087252" }}>
-                  <h1>Total Trips</h1>
-                  <div className="details">
-                    <h2>54</h2>
-                    <p>100 Cr</p>
-                  </div>
-                  <div className="percent-value">
-                    <p>+8%</p>
-                    <p>-9.9%</p>
+              {transport_details.map((value, index) => (
+                <div className="col-12 col-sm-6 col-md-2 col-lg-2">
+                  <div
+                    className="card-wrapper"
+                    style={{ background: color[index] }}
+                  >
+                    <h1>Total Trips</h1>
+                    <div className="details">
+                      <h2>{value.trip_id}</h2>
+                      <p>{value.transaction}</p>
+                    </div>
+                    <div className="percent-value">
+                      <p>{value.present}</p>
+                      <p>{value.Negative_persent}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-
-              <div className="col-12 col-sm-6 col-md-2 col-lg-2">
-                <div
-                  className="card-wrapper"
-                  style={{ backgroundColor: "#888585" }}
-                >
-                  <h1>Total Trips</h1>
-                  <div className="details">
-                    <h2>54</h2>
-                    <p>100 Cr</p>
-                  </div>
-                  <div className="percent-value">
-                    <p>+8%</p>
-                    <p>-9.9%</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-12 col-sm-6 col-md-2 col-lg-2">
-                <div className="card-wrapper" style={{ background: "#000" }}>
-                  <h1>Total Trips</h1>
-                  <div className="details">
-                    <h2>54</h2>
-                    <p>100 Cr</p>
-                  </div>
-                  <div className="percent-value">
-                    <p>+8%</p>
-                    <p>-9.9%</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-12 col-sm-6 col-md-2 col-lg-2">
-                <div className="card-wrapper" style={{ background: "red" }}>
-                  <h1>Total Trips</h1>
-                  <div className="details">
-                    <h2>54</h2>
-                    <p>100 Cr</p>
-                  </div>
-                  <div className="percent-value">
-                    <p>+8%</p>
-                    <p>-9.9%</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-12 col-sm-6 col-md-2 col-lg-2">
-                <div className="card-wrapper" style={{ background: "#6c9fda" }}>
-                  <h1>Total Trips</h1>
-                  <div className="details">
-                    <h2>54</h2>
-                    <p>100 Cr</p>
-                  </div>
-                  <div className="percent-value">
-                    <p>+8%</p>
-                    <p>-9.9%</p>
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </section>
@@ -243,16 +196,16 @@ const Dashboard = () => {
                   <div className="tiles-heading red-border">
                     <h1 className="text-danger">Missing Truck</h1>
                     <p>
-                      Value: <span className="bg-danger">5 Cr</span>
+                      Value: <span className="bg-danger">{}</span>
                     </p>
                   </div>
                   <div className="transport-details">
                     <div className="transport-id">
                       <p>
-                        Trip id: <span>123456</span>
+                        Trip id: <span>{}</span>
                       </p>
                       <p>
-                        Transporter: <span>VRL Logistics</span>
+                        Transporter: <span>vrl</span>
                       </p>
                     </div>
                     <div className="transport-location">
@@ -332,10 +285,10 @@ const Dashboard = () => {
                   <div className="transport-details">
                     <div className="transport-id">
                       <p>
-                        Trip id: <span>123456</span>
+                        Trip id: <span>1269482</span>
                       </p>
                       <p>
-                        Transporter: <span>VRL Logistics</span>
+                        Transporter: <span>kjfn</span>
                       </p>
                     </div>
                     <div className="transport-location">
